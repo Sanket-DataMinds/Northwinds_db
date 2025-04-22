@@ -176,7 +176,7 @@ ORDER BY
   
 ### Q2.Show how much money the company lost due to giving discounts each year, order the years from most recent to least recent. Round to 2 decimal places
 
-``` 
+```sql
 Select 
 YEAR(o.order_date) AS 'order_year' , 
 ROUND(SUM(p.unit_price * od.quantity * od.discount),2) AS 'discount_amount' 
