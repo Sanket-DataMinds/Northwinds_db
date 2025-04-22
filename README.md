@@ -1,4 +1,5 @@
 # Northwind_db
+**Practice more SQL here**: [SQL-Practice.com](https://www.sql-practice.com/)
 # 📊 Northwind Database SQL Practice
 This repository contains a categorized list of SQL questions and answers based on the Northwind database.
 The questions are grouped into three difficulty levels: Easy, Medium, and Hard.
