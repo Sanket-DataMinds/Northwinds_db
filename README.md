@@ -15,7 +15,7 @@ The questions are grouped into three difficulty levels: Easy, Medium, and Hard.
 
 ## Easy Questions
 
-### Q1.Show the category_name and description from the categories table sorted by category_name.
+### Q1. Show the category_name and description from the categories table sorted by category_name.
 
 ```sql
 SELECT category_name, description
@@ -31,7 +31,7 @@ FROM customers
 WHERE Country NOT IN ('Germany','Mexico', 'Spain');
 ```
 
-### Q3.Show order_date, shipped_date, customer_id, Freight of all orders placed on 2018 Feb 26
+### Q3. Show order_date, shipped_date, customer_id, Freight of all orders placed on 2018 Feb 26
 
 ```sql
 SELECT order_date, shipped_date, customer_id, freight
@@ -39,7 +39,7 @@ FROM orders
 WHERE order_date = '2018-02-26';
 ```
 
-### Q4.Show the employee_id, order_id, customer_id, required_date, shipped_date from all orders shipped later than the required date
+### Q4. Show the employee_id, order_id, customer_id, required_date, shipped_date from all orders shipped later than the required date
 
 ```sql
 SELECT employee_id, order_id, customer_id, required_date, shipped_date
@@ -47,7 +47,7 @@ FROM orders
 WHERE shipped_date > required_date;
 ```
 
-### Q5.Show all the even numbered Order_id from the orders table
+### Q5. Show all the even numbered Order_id from the orders table
 
 ```sql
 SELECT order_id
@@ -55,7 +55,7 @@ FROM orders
 WHERE mod(order_id,2)=0;
 ```
 
-### Q6.Show the city, company_name, contact_name of all customers from cities which contains the letter 'L' in the city name, sorted by contact_name
+### Q6. Show the city, company_name, contact_name of all customers from cities which contains the letter 'L' in the city name, sorted by contact_name
 
 ```sql
 SELECT city, company_name, contact_name
@@ -64,7 +64,7 @@ WHERE city LIKE '%L%'
 ORDER BY contact_name ;
 ```
 
-### Q7.Show the company_name, contact_name, fax number of all customers that has a fax number. (not null)
+### Q7. Show the company_name, contact_name, fax number of all customers that has a fax number. (not null)
 
 ```sql
 SELECT company_name, contact_name, fax
@@ -72,7 +72,7 @@ FROM customers
 WHERE Fax IS NOT NULL;
 ```
 
-### Q8.Show the first_name, last_name. hire_date of the most recently hired employee.
+### Q8. Show the first_name, last_name. hire_date of the most recently hired employee.
 
 ```sql
 select 
@@ -92,7 +92,7 @@ from employees
 where hire_date = (select max(hire_date) from employees);
 ```
 
-### Q9.Show the average unit price rounded to 2 decimal places, the total units in stock, total discontinued products from the products table.
+### Q9. Show the average unit price rounded to 2 decimal places, the total units in stock, total discontinued products from the products table.
 
 ```sql
 SELECT round(avg(Unit_Price), 2) AS average_price,
@@ -104,7 +104,7 @@ FROM products;
 
 ## Medium Questions
 
-### Q1.Show the ProductName, CompanyName, CategoryName from the products, suppliers, and categories table
+### Q1. Show the ProductName, CompanyName, CategoryName from the products, suppliers, and categories table
 
 ```sql
 SELECT p.product_name, s.company_name, c.category_name
@@ -113,7 +113,7 @@ JOIN suppliers s ON s.supplier_id = p.Supplier_id
 JOIN categories c On c.category_id = p.Category_id;
 ```
 
-### Q2.Show the category_name and the average product unit price for each category rounded to 2 decimal places.
+### Q2. Show the category_name and the average product unit price for each category rounded to 2 decimal places.
 
 ```sql
 SELECT c.category_name, round(avg(p.unit_price),2) as average_unit_price
@@ -122,7 +122,7 @@ JOIN categories c On c.category_id = p.Category_id
 GROUP BY c.category_name;
 ```
 
-### Q3.Show the city, company_name, contact_name from the customers and suppliers table merged together. Create a column which contains 'customers' or 'suppliers' depending on the table it came from.
+### Q3. Show the city, company_name, contact_name from the customers and suppliers table merged together. Create a column which contains 'customers' or 'suppliers' depending on the table it came from.
 
 ```sql
 select City, company_name, contact_name, 'customers' as relationship 
@@ -132,7 +132,7 @@ select city, company_name, contact_name, 'suppliers'
 from suppliers;
 ```
 
-### Q4.Show the total amount of orders for each year/month.
+### Q4. Show the total amount of orders for each year/month.
 
 ```sql
 select 
@@ -146,7 +146,7 @@ group by order_year, order_month;
 
 ## Hard Questions
 
-### Q1.Show the employee's first_name and last_name, a "num_orders" column with a count of the orders taken, 
+### Q1. Show the employee's first_name and last_name, a "num_orders" column with a count of the orders taken, 
 -- and a column called "Shipped" that displays "On Time" if the order shipped_date is less or equal to the 
 -- required_date, "Late" if the order shipped late, "Not Shipped" if shipped_date is null. Order by employee 
 -- last_name, then by first_name, and then descending by number of orders
@@ -175,7 +175,7 @@ ORDER BY
   num_orders DESC
   ```
   
-### Q2.Show how much money the company lost due to giving discounts each year, order the years from most recent to least recent. Round to 2 decimal places
+### Q2. Show how much money the company lost due to giving discounts each year, order the years from most recent to least recent. Round to 2 decimal places
 
 ```sql
 Select 
