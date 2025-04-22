@@ -192,22 +192,22 @@ order by order_year desc;
 ---
 # 📊 Insights & Observations
 - 🧩 Easy Level Insights
-The majority of employees are associated with specific regions and reports-to hierarchies, indicating a well-defined organizational structure.
-
-There is a consistent pattern of orders placed by customers from specific regions, reflecting strong customer retention in certain markets.
-
-Basic joins between tables like orders, employees, and customers demonstrate how relational databases enable a holistic view of transactions and company operations.
+	The majority of employees are associated with specific regions and reports-to hierarchies, indicating a well-defined organizational structure.
+	
+	There is a consistent pattern of orders placed by customers from specific regions, reflecting strong customer retention in certain markets.
+	
+	Basic joins between tables like orders, employees, and customers demonstrate how relational databases enable a holistic view of transactions and company operations.
 
 - ⚙️ Medium Level Insights
-Analysis of order details reveals that some products are repeatedly ordered together, which could help in identifying product bundling opportunities.
-
-By calculating the total revenue per order or product, we can identify high-performing items and customers, useful for targeted marketing and inventory decisions.
-
-Medium-difficulty queries involving aggregate functions (e.g., SUM, AVG) help to summarize financial data quickly and support strategic decisions like promotions or bulk discount offerings.
+	Analysis of order details reveals that some products are repeatedly ordered together, which could help in identifying product bundling opportunities.
+	
+	By calculating the total revenue per order or product, we can identify high-performing items and customers, useful for targeted marketing and inventory decisions.
+	
+	Medium-difficulty queries involving aggregate functions (e.g., SUM, AVG) help to summarize financial data quickly and support strategic decisions like promotions or bulk discount offerings.
 
 - 🚀 Hard Level Insights
-Complex joins and subqueries reveal customer behavior trends, such as average order value and top purchasing customers over time.
-
-Queries that analyze supplier contributions help in identifying key suppliers and optimizing the supply chain.
-
-Advanced queries also simulate real-time reporting, such as identifying the top 5 products or the most profitable months — essential for executive dashboards and BI tools.
+	Complex joins and subqueries reveal customer behavior trends, such as average order value and top purchasing customers over time.
+	
+	Queries that analyze supplier contributions help in identifying key suppliers and optimizing the supply chain.
+	
+	Advanced queries also simulate real-time reporting, such as identifying the top 5 products or the most profitable months — essential for executive dashboards and BI tools.
